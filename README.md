@@ -12,6 +12,7 @@ This repository contains the code and methodology used to train and evaluate the
 - [Challenges Faced](#challenges-faced)
 - [Conclusion](#conclusion)
 - [Model Weights](#model-weights)
+- [Original Paper](#original-paper)
 
 ## Project Overview
 The goal of this project was to train and fine-tune the DINO object detection model on a custom pedestrian dataset collected from the IIT Delhi campus. The model was evaluated on its ability to detect pedestrians and other objects. Initial testing with a pre-trained ResNet-50 model showed strong results, achieving an Average Precision (AP) score of 0.7726 for the "person" class. Fine-tuning, however, resulted in a lower AP score of 0.4546, mainly due to dataset challenges such as mislabeled and overlapping bounding boxes.
@@ -51,3 +52,18 @@ The DINO model achieved respectable performance in detecting pedestrians in vari
 ## Model Weights
 You can download the fine-tuned model weights from [here](https://drive.google.com/file/d/126M-yYpeDdtS6olqdihLukdMcMa-SE04/view?usp=sharing).
 
+## Original Paper
+
+### DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection
+
+We present DINO (**D**ETR with **I**mproved de**N**oising anch**O**r boxes), a state-of-the-art end-to-end object detector. DINO enhances the performance and efficiency of previous DETR-like models by employing a contrastive approach for denoising training, a mixed query selection method for anchor initialization, and a "look forward twice" scheme for box prediction. DINO achieves 49.4 AP in 12 epochs and 51.3 AP in 24 epochs on COCO with a ResNet-50 backbone and multi-scale features, yielding significant improvements of **+6.0 AP** and **+2.7 AP**, respectively, compared to DN-DETR, the previous best DETR-like model. DINO scales effectively with both model size and data size. Without additional enhancements, after pre-training on the Objects365 dataset with a SwinL backbone, DINO achieves the best results on both COCO \texttt{val2017} (**63.2 AP**) and \texttt{test-dev} (**63.3 AP**). Compared to other models on the leaderboard, DINO significantly reduces model size and pre-training data size while delivering better performance. Our code will be available [here](https://github.com/IDEACVR/DINO).
+
+Let me know if you need any further adjustments!
+@article{Zhang2022DINODW,
+  title={DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection},
+  author={Hao Zhang and Feng Li and Shilong Liu and Lei Zhang and Hang Su and Jun-Juan Zhu and Lionel Ming-shuan Ni and Heung-yeung Shum},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2203.03605},
+  url={https://api.semanticscholar.org/CorpusID:247292561}
+}
