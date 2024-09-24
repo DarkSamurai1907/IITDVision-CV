@@ -4,6 +4,7 @@ An assignment submission by Aniruddh Mantrala, student of MSRIT, Bangalore.
 This repository contains the code and methodology used to train and evaluate the DINO object detection model on the IIT Delhi Pedestrian Dataset. The project was conducted as part of an internship assignment focused on computer vision tasks.
 
 ## Table of Contents
+- [Instructions](#instructions)
 - [Project Overview](#project-overview)
 - [Dataset Preparation](#dataset-preparation)
 - [Model Setup](#model-setup)
@@ -13,6 +14,34 @@ This repository contains the code and methodology used to train and evaluate the
 - [Conclusion](#conclusion)
 - [Model Weights](#model-weights)
 - [Original Paper](#original-paper)
+
+## Instructions
+
+1. **Clone the repository**  
+   Start by cloning this repository to your local machine:
+   ```bash
+   git clone https://github.com/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **Download the dataset**  
+   Obtain the IIT Delhi Pedestrian Dataset and run the preprocessing notebook:
+   - Open `IITDVision_Data_Preprocessing.ipynb`.
+   - Set up the dataset paths as required for the training and validation directories.
+   - Execute the notebook to prepare the dataset.
+
+3. **Download the model weights**  
+   Download the fine-tuned model weights from the following link:  
+   [Fine-Tuned Model Weights](https://drive.google.com/file/d/126M-yYpeDdtS6olqdihLukdMcMa-SE04/view?usp=sharing)
+
+4. **Update model path**  
+   Open the `IITVision_Inference_and_Visualization.ipynb` notebook and update the `model_checkpoint_path` variable with the downloaded weights.
+
+5. **Run the inference notebook**  
+   Run `IITVision_Inference_and_Visualization.ipynb` to:
+   - Visualize the model's predictions on the validation set.
+   - Obtain the Average Precision (AP) score for pedestrian detection.
+   - Generate the Precision-Recall graph.
 
 ## Project Overview
 The goal of this project was to train and fine-tune the DINO object detection model on a custom pedestrian dataset collected from the IIT Delhi campus. The model was evaluated on its ability to detect pedestrians and other objects. Initial testing with a pre-trained ResNet-50 model showed strong results, achieving an Average Precision (AP) score of 0.7726 for the "person" class. Fine-tuning, however, resulted in a lower AP score of 0.4546, mainly due to dataset challenges such as mislabeled and overlapping bounding boxes.
