@@ -68,6 +68,7 @@ The fine-tuning was conducted using 160 training images. Key configuration detai
 - Loss coefficients: Bounding Box Loss (5.0), GIoU Loss (2.0), Focal Loss Alpha (0.25)
 
 Despite some challenges, the fine-tuned model demonstrated improvements in detecting pedestrians in blurry images, but overall accuracy dropped due to issues in the dataset.
+The training logs (train and test loss values) are available on `training_logs.txt`.
 
 ## Challenges Faced
 Some of the key challenges encountered were:
