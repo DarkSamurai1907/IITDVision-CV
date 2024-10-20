@@ -21,7 +21,7 @@ This repository contains the code and methodology used to train and evaluate the
    Start by cloning this repository to your local machine:
    ```bash
    git clone https://github.com/DarkSamurai1907/IITDVision-CV.git
-   cd your-repo-name
+   cd IITDVision-CV
    ```
 
 2. **Download the dataset**  
